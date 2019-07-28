@@ -1,0 +1,35 @@
+<% include includes/header.ejs %>
+
+<h2>Fouls Info:</h2>
+
+
+<table class="table table-bordered table-hover">
+
+    <thead class="font-weight-bold">
+        <tr>
+            <td>Id</td>
+            <td>Player ID</td>
+            <td>Yellow Cards</td>
+            <td>Res Cards</td>
+            <td>Total Cards</td>
+      
+            
+        </tr>
+    </thead>
+    <tbody>
+        <% var i = 1; %>
+        <% player.forEach(d=> { %>
+            <tr>
+                <td style="vertical-align:middle;"><%= d.Fouls_Player_id; %></td>
+                <td style="vertical-align:middle;"><%= d.Player_id; %></td>
+                <td style="vertical-align:middle;"><%= d.Yellow_Cards; %></td>
+                <td style="vertical-align:middle;"><%= d.Red_Cards; %></td>
+                <td style="vertical-align:middle;"><%= d.Yellow_Cards+d.Red_Cards; %></td>
+                
+                
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
+
+</div>

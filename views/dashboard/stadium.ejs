@@ -1,0 +1,28 @@
+<% include includes/header.ejs %>
+
+<h2>Stadium:</h2>
+
+
+<table class="table table-bordered table-hover">
+    <thead class="font-weight-bold">
+        <tr>
+            <td>location</td>
+            <td>Type</td>
+            <td>capicity</td>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <% var i = 1; %>
+        <% Stadium.forEach(d=> { %>
+            <tr>
+                <td style="vertical-align:middle;"><%= d.location; %></td>
+                <td style="vertical-align:middle;"><%= d.type; %></td>
+                <td style="vertical-align:middle;"><%= d.capacity; %></td>
+                
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
+
+</div>

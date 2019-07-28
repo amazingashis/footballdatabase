@@ -1,0 +1,40 @@
+<% include includes/header.ejs %>
+
+<h2>Personnels info:</h2>
+
+
+<table class="table table-bordered table-hover">
+
+    <thead class="font-weight-bold">
+        <tr>
+            <td>id</td>
+            <td>Club id</td>
+            <td>Name</td>
+            <td>DOB</td>
+            <td>Gender</td>
+            <td>Level</td>
+            <td>Contact Info</td>
+            <td>salary</td>
+            <td>Year of Enrollment</td>
+              
+        </tr>
+    </thead>
+    <tbody>
+        <% var i = 1; %>
+        <% Goals_Team.forEach(d=> { %>
+            <tr>
+                <td style="vertical-align:middle;"><%= d.Cp_id; %></td>
+                <td style="vertical-align:middle;"><%= d.Club_id; %></td>
+                <td style="vertical-align:middle;"><%= d.Name; %></td>
+                <td style="vertical-align:middle;"><%= d.Date_of_birth; %></td>
+                <td style="vertical-align:middle;"><%= d.Gender; %></td>
+                <td style="vertical-align:middle;"><%= d.Level; %></td>
+                <td style="vertical-align:middle;"><%= d.Contact_info; %></td>
+                <td style="vertical-align:middle;"><%= d.Salary; %></td>               
+                <td style="vertical-align:middle;"><%= new Date(d.Year_of_enrollment).toLocaleDateString(); %></td>                  
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
+
+</div>

@@ -1,0 +1,25 @@
+{
+  "name": "rms",
+  "version": "1.0.0",
+  "description": "A restaurant management site",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Arjun Bhandari",
+  "license": "ISC",
+  "dependencies": {
+    "ajax": "0.0.4",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.5",
+    "jshint": "^2.10.2",
+    "md5": "^2.2.1",
+    "moment": "^2.23.0",
+    "mysql": "^2.17.1",
+    "nodemon": "^1.18.9",
+    "req-flash": "0.0.3"
+  }
+}

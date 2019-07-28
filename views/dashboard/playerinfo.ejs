@@ -1,0 +1,35 @@
+<% include includes/header.ejs %>
+
+<h2>Player Info:</h2>
+
+
+<table class="table table-bordered table-hover">
+
+    <thead class="font-weight-bold">
+        <tr>
+            <td>Player_id</td>
+            <td>Club ID</td>
+            <td>Player Name</td>
+            <td>Jersey No</td>
+            <td>Position</td>
+      
+            
+        </tr>
+    </thead>
+    <tbody>
+        <% var i = 1; %>
+        <% player.forEach(d=> { %>
+            <tr>
+                <td style="vertical-align:middle;"><%= d.Player_id; %></td>
+                <td style="vertical-align:middle;"><%= d.Club_id; %></td>
+                <td style="vertical-align:middle;"><%= d.Player_name; %></td>
+                <td style="vertical-align:middle;"><%= d.Jersey_no; %></td>
+                <td style="vertical-align:middle;"><%= d.Position; %></td>
+                
+                
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
+
+</div>

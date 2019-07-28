@@ -1,0 +1,42 @@
+<% include includes/header.ejs %>
+
+        <h2>Insert the Data for passing acuracy:</h2>
+        <% if (err !== null) { %>
+            <div class="alert alert-danger alert-dismissible fade in">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong><%= err %></strong>
+            </div>
+            <% } %>
+            <% if (msg !== null) { %>
+            <div class="alert alert-info alert-dismissible fade in">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong><%= msg %></strong>
+            </div>
+            <% } %>
+        <form action="/dashboard/inpassingplayer" method="POST" id="post-item-form">
+            <div class="row">
+                <div class="col-md-6">
+                    
+                    <div class="form-group">
+                        <label for="Player_id">Player Id:</label>
+                        <input type="text" class="form-control" name="Player_id" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Pass_completion">Pass Completion:</label>
+                        <input type="text" class="form-control" name="Pass_completion" required >
+                    </div>
+                    <div class="form-group">
+                        <label for="Pass_accuracy">Pass Accuract:</label>
+                        <input type="text" class="form-control" name="Pass_accuracy" required>
+                    </div>
+                    
+              
+                    
+                    <button class="btn btn-primary btn-block">
+                        Add Details
+                    </button>
+                </div>
+            </div>
+        </form>
+
+<% include includes/footer.ejs %>

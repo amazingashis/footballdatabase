@@ -1,0 +1,38 @@
+<% include includes/header.ejs %>
+
+<h2>Team:</h2>
+
+
+<table class="table table-bordered table-hover">
+    <thead class="font-weight-bold">
+        <tr>
+            <td>Club id</td>
+            <td>Club Name</td>
+            <td>Games Played</td>
+            <td>Games Won</td>
+            <td>Games Lossed</td>
+            <td>Stadium Name</td>
+            <td>Manager</td>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <% var i = 1; %>
+        <% team.forEach(d=> { %>
+            <tr>
+                <td style="vertical-align:middle;"><%= d.Club_id; %></td>
+                <td style="vertical-align:middle;"><%= d.Club_name; %></td>
+                <td style="vertical-align:middle;"><%= d.No_Of_Game_Played; %></td>
+                <td style="vertical-align:middle;"><%= d.No_Of_Gamewon; %></td>
+                <td style="vertical-align:middle;"><%= d.No_Of_Gamelossed; %></td>
+                <td style="vertical-align:middle;"><%= d.Stadium_Name; %></td>
+                <td style="vertical-align:middle;"><%= d.Manager; %></td>
+            
+                
+                
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
+
+</div>

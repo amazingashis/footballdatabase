@@ -1,0 +1,45 @@
+</div>
+<div id="myModal" onclick="hideModal();">
+    <div class="content">
+        <div class="msg" id="modal_msg">
+        </div>
+        <hr>
+        <div class="text-right">
+            <button class="btn btn-secondary">Okay</button>
+        </div>
+    </div>
+</div>
+
+<script src="/js/libs/jquery.min.js"></script>
+
+<script>
+    function showModal(msg){
+        $("#modal_msg").html(msg);
+        $("#myModal").fadeIn();
+    }
+
+    function hideModal(){
+        $("#myModal").fadeOut();
+    }
+
+    function postItem(){
+        $.ajax({
+            url: '',
+            method: 'post',
+            data: $("#post-items-form").serializeArray(),
+            success: function(response){
+                if (response.error){
+                    showModal(response.msg)
+                } else {
+                    showModal(response.msg)
+                }
+            },
+            error: function(){
+                showModal("Some error happened.");
+            }
+        });
+    }
+</script>
+</body>
+
+</html>

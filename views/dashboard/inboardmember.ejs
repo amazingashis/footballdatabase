@@ -1,0 +1,50 @@
+<% include includes/header.ejs %>
+
+        <h2>Add the Board Member:</h2>
+        <% if (err !== null) { %>
+            <div class="alert alert-danger alert-dismissible fade in">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong><%= err %></strong>
+            </div>
+            <% } %>
+            <% if (msg !== null) { %>
+            <div class="alert alert-info alert-dismissible fade in">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong><%= msg %></strong>
+            </div>
+            <% } %>
+        <form action="/dashboard/inboardmember" method="POST" id="post-item-form">
+            <div class="row">
+                <div class="col-md-6">
+                    
+                    <div class="form-group">
+                        <label for="Name">Name:</label>
+                        <input type="text" class="form-control" name="Name" placeholder="name of the Board member">
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="Date_of_birth">DOB:</label>
+                        <input type="date" class="form-control" name="Date_of_birth" placeholder="YYYY-MM-DD">
+                    </div>
+                    <div class="form-group">
+                        <label for="Position">Position:</label>
+                        <input type="text" class="form-control" name="Position" placeholder="Secratery/treasurer">
+                    </div>
+                    <div class="form-group">
+                        <label for="Years_of_active">Year of Enrollement:</label>
+                        <input type="date" class="form-control" name="Years_of_active" placeholder="YYYY-MM--DD">
+                    </div>
+                    <div class="form-group">
+                        <label for="Contact_info">Contact info:</label>
+                        <input type="text" class="form-control" name="Contact_info" placeholder="email/phno">
+                    </div>
+               
+                    
+                    <button class="btn btn-primary btn-block">
+                        Add Details
+                    </button>
+                </div>
+            </div>
+        </form>
+
+<% include includes/footer.ejs %>

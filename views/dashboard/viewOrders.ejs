@@ -1,0 +1,35 @@
+<% include includes/header.ejs %>
+
+<h2>Orders:</h2>
+
+<table class="table table-bordered table-hover">
+    <thead class="font-weight-bold">
+        <tr>
+            <td>Order ID</td>
+            <td>Customer ID</td>
+            <td>Full Name</td>
+            <td>Table No</td>
+            <td>Item Ordered</td>
+            <td>Quantity</td>
+            <td>Price</td>
+        </tr>
+    </thead>
+    <tbody>
+        <% var i = 1; %>
+        <% order_data.forEach(d=> { %>
+            <tr>
+                <td style="vertical-align:middle;"><%= d.order_id; %></td>
+                <td style="vertical-align:middle;"><%= d.customerId; %></td>
+                <td style="vertical-align:middle;"><%= d.full_name; %></td>
+                <td style="vertical-align:middle;"><%= d.table_no; %></td>
+                <td style="vertical-align:middle;"><%= d.item_name; %></td>
+                <td style="vertical-align:middle;"><%= d.quantity; %></td>
+                <td style="vertical-align:middle;"><%= d.price*d.quantity; %></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
+
+</div>
+
+<% include includes/footer.ejs %>
